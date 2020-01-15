@@ -1,0 +1,10 @@
+export const getStatistics = state => state.locust.requests.stats;
+export const getStatus = state => state.locust.requests.state;
+export const getTotalRPS = state => state.locust.requests.total_rps;
+export const getTotalFailuresRate = state => state.locust.requests.fail_ratio;
+export const getFailures = state => state.locust.requests.errors;
+export const getExceptions = state => state.locust.exceptions;
+export const getRequestsChartData = state => state.locust.chartData;
+export const getSwarm = state => state.locust.swarmControl;
+export const getCurrentAmountUsers = state => state.locust.requests.user_count;
+export const getTestTitle = state => state.locust.testTitle;
