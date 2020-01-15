@@ -1,0 +1,3 @@
+node_modules
+.env.local
+running_test
