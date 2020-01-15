@@ -1,0 +1,11 @@
+FROM node:12-alpine
+
+RUN npm install -g parcel-bundler
+
+COPY . ./app/
+
+WORKDIR /app
+
+RUN npm install
+EXPOSE 1234
+EXPOSE 1235
