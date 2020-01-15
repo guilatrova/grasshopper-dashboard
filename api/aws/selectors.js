@@ -1,4 +1,4 @@
-const { RDS_NAME_FILTER } = process.env;
+const { RDS_NAME_FILTER, GH_ORG } = process.env;
 
 const selectTaskDefinitionFromServicesDescription = (services) => services.map(svc => svc.taskDefinition);
 
@@ -7,7 +7,7 @@ const selectGitHubCommitLink = (image) => {
         const hash = image.match(/:.*/)[0].slice(1);
         const service = image.match(/\/.*:/)[0].slice(1, -1);
 
-        return `https://github.com/academicmerit/${service}/tree/${hash}`;
+        return `https://github.com/${GH_ORG}/${service}/tree/${hash}`;
     }
 }
 
