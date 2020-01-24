@@ -23,5 +23,7 @@ services:
   locust:
     build: ../locust
     image: locustio:local
+    environment:
+      LOCUST_OPTS: "--host https://google.com"
     ports:
       - "8089:8089"
