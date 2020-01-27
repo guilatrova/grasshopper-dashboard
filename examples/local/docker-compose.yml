@@ -1,13 +1,17 @@
 version: "3.2"
 services:
-  # ui:
-  #   build: ../../ui
-  #   image: latrova/grasshopper-dashboard-ui:local
-  #   ports:
-  #     - "80:80"
-  #   environment:
-  #     NODE_ENV: "development"
-  #     PARCEL_WORKERS: 1
+  ui:
+    build:
+      context: ../../ui
+      dockerfile: Dockerfile.dev
+    image: latrova/grasshopper-dashboard-ui:local
+    ports:
+      - "1234:1234"
+    environment:
+      NODE_ENV: "development"
+      PARCEL_WORKERS: 1
+    depends_on:
+      - api
 
   api:
     build: ../../api
