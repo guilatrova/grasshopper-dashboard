@@ -1,5 +1,5 @@
 {
-  "name": "ft-dashboard",
+  "name": "grasshopper-dashboard-ui",
   "version": "1.0.0",
   "description": "Load Testing Dashboard",
   "main": "index.js",
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/academicmerit/finetune-load-test-dashboard-ui.git"
+    "url": "git+https://github.com/guilatrova/grasshopper-dashboard.git"
   },
   "standard": {
     "ignore": [
@@ -50,7 +50,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/academicmerit/finetune-load-test-dashboard-ui/issues"
+    "url": "https://github.com/guilatrova/grasshopper-dashboard/issues"
   },
-  "homepage": "https://github.com/academicmerit/finetune-load-test-dashboard-ui#readme"
+  "homepage": "https://github.com/guilatrova/grasshopper-dashboard#readme"
 }

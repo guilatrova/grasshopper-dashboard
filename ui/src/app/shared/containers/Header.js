@@ -35,7 +35,7 @@ const Header = ({ appState, status, rps, failRatio, testTitle }) => {
     <AppBar position='static'>
       <Toolbar>
         <Typography variant='h6' className={classes.title}>
-          FineTune Dashboard
+          Grasshopper Dashboard
         </Typography>
 
         {appState === appStates.RUN_STATE && <HeaderRunMode status={status} rps={rps} classes={classes} />}

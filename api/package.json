@@ -1,5 +1,5 @@
 {
-  "name": "finetune-load-test-dashboard-api",
+  "name": "grasshopper-dashboard-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/academicmerit/finetune-load-test-dashboard-api.git"
+    "url": "git+https://github.com/guilatrova/grasshopper-dashboard.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/academicmerit/finetune-load-test-dashboard-api/issues"
+    "url": "https://github.com/guilatrova/grasshopper-dashboard/issues"
   },
-  "homepage": "https://github.com/academicmerit/finetune-load-test-dashboard-api#readme"
+  "homepage": "https://github.com/guilatrova/grasshopper-dashboard#readme"
 }
