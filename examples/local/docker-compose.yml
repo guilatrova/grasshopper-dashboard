@@ -1,16 +1,5 @@
 version: "3.2"
 services:
-  # api:
-  #   build: ../../api
-  #   image: latrova/grasshopper-dashboard-api:local
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     LOCUST_HOST: "http://localhost:8089"
-  #   env_file:
-  #     - ../../api/.env.default
-  #     - ../../api/.env.local
-
   # ui:
   #   build: ../../ui
   #   image: latrova/grasshopper-dashboard-ui:local
@@ -19,6 +8,19 @@ services:
   #   environment:
   #     NODE_ENV: "development"
   #     PARCEL_WORKERS: 1
+
+  api:
+    build: ../../api
+    image: latrova/grasshopper-dashboard-api:local
+    ports:
+      - "3000:3000"
+    environment:
+      LOCUST_HOST: "http://locust:8089"
+    env_file:
+      - ../../api/.env.default
+      - ../../api/.env.local
+    depends_on:
+      - locust
 
   locust:
     build: ../locust
