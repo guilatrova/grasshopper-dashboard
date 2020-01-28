@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locust-slave
+  labels:
+    role: slave
+spec:
+  replicas: 2 # Adjust to your amount of replicas
+  selector:
+    matchLabels:
+      role: slave
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        role: slave
+    spec:
+      containers:
+        - image: locustio:latest # Update to your image
+          imagePullPolicy: Always
+          name: locust-slave
+          env:
+            - name: LOCUST_MODE
+              value: SLAVE
+            - name: LOCUST_MASTER
+              value: locust-master-host
+          envFrom:
+            - configMapRef:
+                name: locust-config

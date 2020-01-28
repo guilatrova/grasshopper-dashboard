@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: locust-master-host
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: "environment=EKS"
+    service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+spec:
+  selector:
+    role: master
+  ports:
+    - port: 80
+      targetPort: 8089
+      name: ui
+    - port: 5557
+      name: comm
+    - port: 5558
+      name: comm-plus-1
+  type: LoadBalancer
