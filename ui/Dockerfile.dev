@@ -1,5 +1,8 @@
 FROM node:12-alpine
 
+ARG API_HOST
+ENV API_HOST $API_HOST
+
 RUN npm install -g parcel-bundler
 
 COPY . ./app/

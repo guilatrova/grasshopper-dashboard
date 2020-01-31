@@ -4,9 +4,12 @@ services:
     build:
       context: ../../ui
       dockerfile: Dockerfile.dev
+      args:
+        API_HOST: http://localhost:3000
     image: latrova/grasshopper-dashboard-ui:local
     ports:
       - "1234:1234"
+      - "1235:1235"
     environment:
       NODE_ENV: "development"
       PARCEL_WORKERS: 1

@@ -4,7 +4,7 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
-RUN pip install locustio==0.9.0
+RUN pip install locustio
 
 EXPOSE 8089 5557 5558
 
