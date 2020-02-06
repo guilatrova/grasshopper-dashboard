@@ -40,7 +40,7 @@ spec:
             ]
       containers:
         - image: latrova/grasshopper-dashboard-api:latest
-          name: finetune-load-test-dashboard-api
+          name: grasshopper-api
           imagePullPolicy: Always
           env:
             - name: LOCUST_HOST

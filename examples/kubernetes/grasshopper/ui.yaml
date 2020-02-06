@@ -38,8 +38,8 @@ spec:
               "until nslookup grasshopper-api-host; do echo waiting grasshopper-api-host; sleep 2; done;",
             ]
       containers:
-        - image: latrova/grasshopper-dashboard-ui:latest # It won't work - Check README to check why
-          name: finetune-load-test-dashboard-ui
+        - image: latrova/grasshopper-dashboard-ui:latest # It won't work - Need to have a proper tag
+          name: grasshopper-ui
           imagePullPolicy: Always
           ports:
             - containerPort: 80
