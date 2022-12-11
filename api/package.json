@@ -6,7 +6,7 @@
   "dependencies": {
     "aws-sdk": "^2.582.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.15",
     "node-cache": "^5.1.0",
     "request": "^2.88.0"
